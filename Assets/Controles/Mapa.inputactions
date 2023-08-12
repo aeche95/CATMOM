@@ -1,0 +1,45 @@
+{
+    "name": "Mapa",
+    "maps": [
+        {
+            "name": "Default",
+            "id": "21b0dfd0-4b3c-4c2b-8196-91fd36f64bb6",
+            "actions": [
+                {
+                    "name": "Tocar",
+                    "type": "Button",
+                    "id": "f741a837-7c34-41e6-ae9c-e8cffde153ce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bf0e4502-f0fa-4a64-99bb-365eef5a20e8",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tocar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dbb622b7-bc7b-45de-a402-8c3b5a27e2a3",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tocar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
