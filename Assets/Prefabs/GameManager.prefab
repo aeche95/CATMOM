@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2976900263525827803}
   - component: {fileID: 6491090610740171679}
-  - component: {fileID: 7797931797857170829}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,20 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64413fda15a75b44bd901116b82d863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  days: 0
-  health: 100
-  currentSceneIndex: 0
-  previousSceneButton: {fileID: 0}
-  nextSceneButton: {fileID: 0}
---- !u!114 &7797931797857170829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3319402009353409171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b35a9b856249c4da5d8932678be989, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 375a6273a8ab01348b95e47b0b3be1be, type: 2}
+  nonInteractablesTag: NonInteractable

@@ -61,7 +61,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_TargetDisplay: 0
 --- !u!114 &2818946670697670574
 MonoBehaviour:
@@ -112,11 +112,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 931228988457487374}
-  - component: {fileID: -3187728118391129302}
   - component: {fileID: 2574468359868279981}
   m_Layer: 0
   m_Name: SceneManager
-  m_TagString: Untagged
+  m_TagString: SceneManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,18 +136,6 @@ Transform:
   - {fileID: 5235413683410760838}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-3187728118391129302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2463704575606857383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b35a9b856249c4da5d8932678be989, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2574468359868279981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b145d9f1c8174409e8404ec2aadba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 4f75a5712beb6ee4aacddd0833f206b5, type: 2}
 --- !u!1 &6213802078489076180
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -820, y: -383}
+  m_AnchoredPosition: {x: -850, y: 0}
   m_SizeDelta: {x: 175.5824, y: 120.8973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6637294455804248114
@@ -281,8 +269,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2574468359868279981}
+        m_TargetAssemblyTypeName: SceneChangeManager, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 3
         m_Arguments:
@@ -328,7 +316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -550, y: -383}
+  m_AnchoredPosition: {x: 850, y: 0}
   m_SizeDelta: {x: 175.5824, y: 120.8973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4407397060822050003
@@ -413,8 +401,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2574468359868279981}
+        m_TargetAssemblyTypeName: SceneChangeManager, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 3
         m_Arguments:

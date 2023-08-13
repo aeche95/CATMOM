@@ -10,15 +10,15 @@ public class Obj_fondo : MonoBehaviour
     Sprite[] images;
 
     [SerializeField]
-    bool isDamaged = false;
+    bool isAbandoned = false;
 
     [SerializeField]
     Image image;
 
-    public void Damage()
+    public void Abandon()
     {
-        isDamaged = true;
-        image.sprite = images[1];
+        isAbandoned = true;
+        image.sprite = images[images.Length-1];
     }
 
     private void Awake()

@@ -7,29 +7,65 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    int days = 0;
+    GameManagerSO data;
 
     [SerializeField]
-    int health = 100;
+    string nonInteractablesTag;
+
+    [SerializeField]
+    bool PlayerWon = false;
 
     int GetDias()
     {
-        return days;
+        return data.days;
     }
 
     public void PassDay()
     {
-        days += 1;
+        data.days += 1;
     }
 
     public int GetHealth()
     {
-        return health;
+        return data.health;
     }
 
     public void AddHealth(int healthToAdd)
     {
-        health += healthToAdd;
+        data.health += healthToAdd;
     }
 
+    public void SetAbandoned()
+    {
+        data.isAbandoned = true;
+    }
+
+    void CheckAbandoned()
+    {
+        if (data.isAbandoned)
+        {
+            SetAbandonedItems();
+
+        }
+    }
+
+    void SetAbandonedItems()
+    {
+        GameObject[] nonInteractables = GameObject.FindGameObjectsWithTag(nonInteractablesTag);
+        foreach (GameObject gameObject in nonInteractables)
+        {
+            Obj_fondo obj_Fondo = gameObject.GetComponent<Obj_fondo>();
+            obj_Fondo.Abandon();
+        }
+    }
+
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += CheckIfSceneIsAbandoned;
+    }
+
+    private void CheckIfSceneIsAbandoned(Scene arg0, LoadSceneMode arg1)
+    {
+        CheckAbandoned();
+    }
 }
