@@ -37,6 +37,6 @@ public class Animacion : MonoBehaviour
     }
     void TellGameManagetToPassTime()
     {
-        gameManagerInstance.SetAbandoned();
+        gameManagerInstance.SetAbandoned(true);
     }
 }

@@ -32,6 +32,6 @@ public class Code : MonoBehaviour
     
     void playGame(ClickEvent evt)
     {
-        SceneManager.LoadScene("Sala", LoadSceneMode.Single);
+        SceneManager.LoadScene("Habitacion", LoadSceneMode.Single);
     }
 }

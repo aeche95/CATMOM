@@ -9,8 +9,5 @@ public class SceneManagementSO : ScriptableObject
     public int currentSceneIndex = 0;
 
     [SerializeField]
-    public int lastSceneIndex = 0;
-
-    [SerializeField]
     public string[] playableScenes;
 }
