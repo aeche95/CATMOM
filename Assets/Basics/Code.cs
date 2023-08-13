@@ -24,7 +24,7 @@ public class Code : MonoBehaviour
       // Callback
       play_button.RegisterCallback<ClickEvent>(playGame);
       //credits_button.RegisterCallback<ClickEvent>(credits);
-      //quit_button.RegisterCallback<ClickEvent>(quit);
+      quit_button.RegisterCallback<ClickEvent>(quitGame);
 
     }
 
@@ -33,5 +33,10 @@ public class Code : MonoBehaviour
     void playGame(ClickEvent evt)
     {
         SceneManager.LoadScene("Habitacion", LoadSceneMode.Single);
+    }
+
+    public void quitGame(ClickEvent evt) 
+    { 
+        Application.Quit();
     }
 }

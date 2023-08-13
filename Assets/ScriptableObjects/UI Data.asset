@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec938682f4e0694588eb0a51dd82359, type: 3}
   m_Name: UI Data
   m_EditorClassIdentifier: 
-  cursor: {fileID: 0}
+  normalCursor: {fileID: 0}
+  clickingCursor: {fileID: 0}
   cursorMode: 0
   cursorOffset: {x: 0, y: 0}

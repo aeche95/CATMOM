@@ -6,12 +6,18 @@ using UnityEngine;
 public class UIManagerSO : ScriptableObject
 {
     [SerializeField]
-    public Texture2D cursor;
+    public Texture2D normalCursor;
+
+    [SerializeField] 
+    public Texture2D clickingCursor;
 
     [SerializeField]
     public CursorMode cursorMode;
 
     [SerializeField]
     public Vector2 cursorOffset;
+
+    [SerializeField]
+    public bool isPaused = false;
     
 }
