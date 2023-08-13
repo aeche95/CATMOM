@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class No_destruir : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    string tagToPreserve;
+
     private void Awake()
     {
+        GameObject[] objs = GameObject.FindGameObjectsWithTag(tagToPreserve);
+
+        if (objs.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+
         DontDestroyOnLoad(this.gameObject);
     }
 }
