@@ -13,5 +13,12 @@ public class GameManagerSO : ScriptableObject
 
     [SerializeField]
     public bool isAbandoned = false;
-    
+
+    private void Awake()
+    {
+        isAbandoned = false;
+        health = 100;
+        days = 0;
+    }
+
 }

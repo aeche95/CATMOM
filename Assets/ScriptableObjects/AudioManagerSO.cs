@@ -8,4 +8,10 @@ public class AudioManagerSO : ScriptableObject
 
     [SerializeField]
     public AudioClip bgMusic;
+
+    [SerializeField]
+    public AudioClip darkBgMusic;
+
+    [SerializeField]
+    public float volume = 1f;
 }

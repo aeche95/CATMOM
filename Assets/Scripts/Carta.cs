@@ -30,6 +30,9 @@ public class Carta : MonoBehaviour
     [SerializeField]
     public bool isActive = true;
 
+    [SerializeField]
+    Button button;
+
     public int Flip()
     {
         isFacingFront = !isFacingFront;
@@ -51,6 +54,8 @@ public class Carta : MonoBehaviour
         image.sprite = faceSprite;
         value = Value;
         gridPosition = position;
+
+        PlaceCard();
     }
 
     void PlaceCard()
@@ -73,5 +78,10 @@ public class Carta : MonoBehaviour
     public int GetValue()
     {
         return value;
+    }
+
+    public Button GetButton()
+    {
+        return button;
     }
 }

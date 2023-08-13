@@ -18,12 +18,16 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         Cursor.SetCursor(data.normalCursor, data.cursorOffset, data.cursorMode);
+        if(menuPausa.enabled )
+        {
+            menuPausa.GetComponent<Canvas>().enabled = false;
+        }
     }
 
     public void TogglePause()
     {
         data.isPaused = !data.isPaused;
-        menuPausa.enabled = data.isPaused;
+        menuPausa.GetComponent<Canvas>().enabled = data.isPaused;
     }
 
     private void Update()

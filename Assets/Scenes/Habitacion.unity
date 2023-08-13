@@ -745,7 +745,23 @@ MonoBehaviour:
   rows: 4
   columns: 2
   cardPrefab: {fileID: 168903607}
-  values: 0100000001000000020000000200000003000000030000000400000004000000
+  values: 0100000002000000030000000100000004000000020000000200000003000000
+  firstCard: {fileID: 0}
+  secondCard: {fileID: 0}
+  cards:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sprites:
+  - {fileID: 21300000, guid: d05d628f63cf6314bae78fc9b9d854dc, type: 3}
+  - {fileID: 21300000, guid: 3aaebba102b26f142bfacbcb4e252687, type: 3}
+  - {fileID: 21300000, guid: 6dbda52232596334d9f963360c5de0b1, type: 3}
+  - {fileID: 21300000, guid: e4590df5e52bc2049b777a7ab8fd5eb3, type: 3}
 --- !u!223 &1265740367 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 2002773882300150633, guid: 8434a0210a3b4564989f4f2eadb5b6a3, type: 3}
@@ -766,10 +782,14 @@ PrefabInstance:
     - target: {fileID: 2937687077418966091, guid: 00d3f85b1dff185488f2e4c2aaf0b9cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1184806232}
+      objectReference: {fileID: 1184806237}
     - target: {fileID: 2937687077418966091, guid: 00d3f85b1dff185488f2e4c2aaf0b9cb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2937687077418966091, guid: 00d3f85b1dff185488f2e4c2aaf0b9cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Memoria, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3398478673077335963, guid: 00d3f85b1dff185488f2e4c2aaf0b9cb, type: 3}
       propertyPath: m_Pivot.x

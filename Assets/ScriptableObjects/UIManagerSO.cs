@@ -19,5 +19,10 @@ public class UIManagerSO : ScriptableObject
 
     [SerializeField]
     public bool isPaused = false;
-    
+
+    private void Awake()
+    {
+        isPaused = false;
+    }
+
 }

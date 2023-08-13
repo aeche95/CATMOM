@@ -215,6 +215,10 @@ MonoBehaviour:
   isFacingFront: 0
   gridPosition: {x: 0, y: 0}
   image: {fileID: 0}
+  frontSprite: {fileID: 0}
+  backSprite: {fileID: 0}
+  isActive: 1
+  button: {fileID: 7714799499528451066}
 --- !u!1 &4705761731035254931
 GameObject:
   m_ObjectHideFlags: 0

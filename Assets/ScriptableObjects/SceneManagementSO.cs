@@ -10,4 +10,9 @@ public class SceneManagementSO : ScriptableObject
 
     [SerializeField]
     public string[] playableScenes;
+
+    private void Awake()
+    {
+        currentSceneIndex = 1;
+    }
 }

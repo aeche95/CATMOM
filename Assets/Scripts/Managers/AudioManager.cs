@@ -12,7 +12,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     AudioSource bgMusicAudioSource;
 
-    
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +19,7 @@ public class AudioManager : MonoBehaviour
         SceneManager.sceneLoaded += ResumeMusic;
         SceneManager.sceneUnloaded += PauseMusic;
         bgMusicAudioSource.clip = data.bgMusic;
+        bgMusicAudioSource.volume = data.volume;
         bgMusicAudioSource.Play();
     }
 
@@ -32,6 +32,11 @@ public class AudioManager : MonoBehaviour
     {
      
         bgMusicAudioSource.UnPause();
+    }
+
+    public void SetNewClip(AudioClip newClip)
+    {
+        bgMusicAudioSource.clip = newClip;
     }
 
 }
