@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: b5be17516e7ca194dadff33e7a4a2e7c
   - enabled: 1
-    path: Assets/Scenes/Sala.unity
-    guid: ee0ea7bcbab362d4b903184f95c41853
+    path: Assets/Scenes/Habitacion.unity
+    guid: 48b9a6d764ad4e34683b75f6beb17e0a
   - enabled: 1
     path: Assets/Scenes/Cocina.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Habitacion.unity
-    guid: 48b9a6d764ad4e34683b75f6beb17e0a
+    path: Assets/Scenes/Sala.unity
+    guid: ee0ea7bcbab362d4b903184f95c41853
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 73213e0c86de82746832112c0b1fafde

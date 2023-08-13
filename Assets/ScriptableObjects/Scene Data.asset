@@ -15,6 +15,6 @@ MonoBehaviour:
   currentSceneIndex: 2
   lastSceneIndex: 2
   playableScenes:
-  - Sala
-  - Cocina
   - Habitacion
+  - Cocina
+  - Sala
