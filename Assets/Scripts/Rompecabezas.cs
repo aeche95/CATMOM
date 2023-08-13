@@ -21,6 +21,9 @@ public class Rompecabezas : MonoBehaviour
     EventSystem eventSystem;
 
     [SerializeField]
+    bool isPuzzleSolved = false;
+
+    [SerializeField]
     GameObject[] pieces = new GameObject[16];
 
     [SerializeField]
@@ -38,12 +41,29 @@ public class Rompecabezas : MonoBehaviour
     [SerializeField]
     float toleranceValue;
 
+    [SerializeField]
+    Animator animator;
+
+    [SerializeField]
+    string startTrigger;
+
+    [SerializeField]
+    string endTrigger;
+
+    [SerializeField]
+    Animacion animacion;
+
+    [SerializeField]
+    GameObject fadeoutOwner;
+
     // Start is called before the first frame update
     void Start()
     {
         raycaster = GetComponent<GraphicRaycaster>();
+        animator = GetComponent<Animator>();    
         eventSystem = eventSystemHolder.GetComponent<EventSystem>();
-       if(this.gameObject.activeSelf)
+        animacion = GetComponent<Animacion>();
+        if (this.gameObject.activeSelf)
         {
             this.gameObject.SetActive(false);
         }
@@ -148,13 +168,27 @@ public class Rompecabezas : MonoBehaviour
 
     public void StartPuzzle()
     {
-        this.gameObject.SetActive(true);
-        MixPieces();
+        if(!isPuzzleSolved)
+        {
+            this.gameObject.SetActive(true);
+            MixPieces();
+            animator.SetTrigger(startTrigger);
+        }
     }
 
     void FinishPuzzle()
     {
-        this.gameObject.SetActive(false);
+        animator.SetTrigger(endTrigger);
+        isPuzzleSolved = true;
+        
     }
 
+    void StartFadeout()
+    {
+        if(fadeoutOwner != null)
+        {
+            Animacion animacion = fadeoutOwner.GetComponent<Animacion>();
+            animacion.StartAnimation();
+        }
+    }
 }

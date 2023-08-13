@@ -32,7 +32,6 @@ public class Code : MonoBehaviour
     
     void playGame(ClickEvent evt)
     {
-        SceneManager.LoadScene("Managers", LoadSceneMode.Additive);
         SceneManager.LoadScene("Sala", LoadSceneMode.Single);
     }
 }

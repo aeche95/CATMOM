@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     public void SetAbandoned()
     {
         data.isAbandoned = true;
+        SetAbandonedItems();
     }
 
     void CheckAbandoned()

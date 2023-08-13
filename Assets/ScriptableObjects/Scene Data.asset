@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSceneIndex: 2
   lastSceneIndex: 2
+  playableScenes:
+  - Sala
+  - Cocina
+  - Habitacion
