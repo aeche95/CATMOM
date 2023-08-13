@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sala.unity
     guid: 288adad42a09dc3499a130c6026117f9
-  - enabled: 1
-    path: Assets/Scenes/Creditos.unity
-    guid: 604af7a76b3b653459f8d9216ffb35c0
   m_configObjects: {}
