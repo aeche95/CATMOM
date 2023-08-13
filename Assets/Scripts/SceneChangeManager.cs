@@ -10,25 +10,42 @@ public class SceneChangeManager : MonoBehaviour
     int currentSceneIndex = 0;
 
     [SerializeField]
-    Button previousSceneButton;
-
-    [SerializeField]
-    Button nextSceneButton;
-
-    Dictionary<int, string> sceneNameDictionary;
+    Canvas canvas; 
 
     public void ChangeScene(int sceneDirection)
     {
         currentSceneIndex += sceneDirection;
-        currentSceneIndex %= sceneNameDictionary.Count;
-        SceneManager.LoadScene(sceneNameDictionary[currentSceneIndex]);
+        if(currentSceneIndex >= SceneManager.sceneCount)
+        {
+            currentSceneIndex = 1;
+        }
+        if(currentSceneIndex < 1)
+        {
+            currentSceneIndex = SceneManager.sceneCount - 1;
+        }
+       
+        SceneManager.LoadScene(currentSceneIndex,LoadSceneMode.Additive);
     }
 
     private void Awake()
     {
-        sceneNameDictionary = new Dictionary<int, string>();
-        sceneNameDictionary.Add(0, "Sala");
-        sceneNameDictionary.Add(1, "Habitacion");
-        sceneNameDictionary.Add(2, "Cocina");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        if (currentSceneIndex == 0)
+        {
+            canvas.enabled = false;
+        }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        currentSceneIndex = scene.buildIndex;
+        if(currentSceneIndex == 0)
+        {
+            canvas.enabled = false;
+        }
+        else
+        {
+            canvas.enabled = true;
+        }
     }
 }
