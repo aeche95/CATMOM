@@ -89,5 +89,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   images: []
-  isDamaged: 0
+  isAbandoned: 0
   image: {fileID: 8018542443424215216}
