@@ -1,9 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build.Content;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,38 +10,25 @@ public class SceneChangeManager : MonoBehaviour
     int currentSceneIndex = 0;
 
     [SerializeField]
-    int sceneCount = 4;
-
-    [SerializeField]
     Button previousSceneButton;
 
     [SerializeField]
     Button nextSceneButton;
 
+    Dictionary<int, string> sceneNameDictionary;
+
     public void ChangeScene(int sceneDirection)
     {
         currentSceneIndex += sceneDirection;
-
-        if(currentSceneIndex >= sceneCount)
-        {
-            currentSceneIndex = 0;
-        }
-
-        if(currentSceneIndex < 0)
-        {
-            currentSceneIndex = sceneCount - 1;
-        }
-
-        SceneManager.LoadScene(currentSceneIndex);
+        currentSceneIndex %= sceneNameDictionary.Count;
+        SceneManager.LoadScene(sceneNameDictionary[currentSceneIndex]);
     }
+
     private void Awake()
     {
-        SetButtonVisibility(SceneManager.GetActiveScene(), LoadSceneMode.Single);
-        SceneManager.sceneLoaded += SetButtonVisibility;
-    }
-
-    private void SetButtonVisibility(Scene scene,LoadSceneMode loadSceneMode)
-    {
-        previousSceneButton.GetComponent<Image>().enabled = nextSceneButton.GetComponent<Image>().enabled = !SceneManager.GetActiveScene().name.Equals("Main");
+        sceneNameDictionary = new Dictionary<int, string>();
+        sceneNameDictionary.Add(0, "Sala");
+        sceneNameDictionary.Add(1, "Habitacion");
+        sceneNameDictionary.Add(2, "Cocina");
     }
 }
