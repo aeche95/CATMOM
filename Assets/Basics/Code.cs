@@ -23,8 +23,8 @@ public class Code : MonoBehaviour
 
       // Callback
       play_button.RegisterCallback<ClickEvent>(playGame);
-      /* credits_button.RegisterCallback<ClickEvent>(credits);
-      quit_button.RegisterCallback<ClickEvent>(quit); */
+      credits_button.RegisterCallback<ClickEvent>(showCredits);
+      /* quit_button.RegisterCallback<ClickEvent>(quit); */
 
     }
 
@@ -33,5 +33,11 @@ public class Code : MonoBehaviour
     void playGame(ClickEvent evt)
     {
         SceneManager.LoadScene("Sala");
+    }
+
+    
+    void showCredits(ClickEvent evt)
+    {
+        SceneManager.LoadScene("Creditos");
     }
 }
