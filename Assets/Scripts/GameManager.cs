@@ -12,18 +12,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     int health = 100;
 
-    [SerializeField]
-    int currentSceneIndex = 0;
-
-    [SerializeField]
-    Button previousSceneButton;
-
-    [SerializeField]
-    Button nextSceneButton;
-
-    [SerializeField]
-    Dictionary<int, string> sceneNameDictionay;
-
     int GetDias()
     {
         return days;
@@ -44,17 +32,4 @@ public class GameManager : MonoBehaviour
         health += healthToAdd;
     }
 
-    public void ChangeScene(int sceneDirection)
-    {
-        currentSceneIndex += sceneDirection;
-        currentSceneIndex %= sceneNameDictionay.Count;
-        SceneManager.LoadScene(sceneNameDictionay[currentSceneIndex]);
-    }
-
-    private void Awake()
-    {
-        sceneNameDictionay.Add(0, "Sala");
-        sceneNameDictionay.Add(1, "Habitacion");
-        sceneNameDictionay.Add(2, "Cocina");
-    }
 }
