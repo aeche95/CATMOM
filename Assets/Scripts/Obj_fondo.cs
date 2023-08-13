@@ -21,10 +21,9 @@ public class Obj_fondo : MonoBehaviour
         image.sprite = images[1];
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-    
+        image = GetComponent<Image>();
     }
 
 }
