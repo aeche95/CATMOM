@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cocina.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 1799a7790a66a7b40bc67f26f6a128b9
+  - enabled: 1
+    path: Assets/Scenes/Sala.unity
+    guid: 288adad42a09dc3499a130c6026117f9
   m_configObjects: {}

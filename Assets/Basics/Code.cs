@@ -8,13 +8,30 @@ public class Code : MonoBehaviour
 {
     UIDocument Main;
 
+    Button play_button;
+    Button credits_button;
+    Button quit_button;
+
+
     private void OnEnable() {
       Main = GetComponent<UIDocument>(); 
       VisualElement root = Main.rootVisualElement;
+
+      play_button = root.Q<Button>("play");
+      credits_button = root.Q<Button>("credits");
+      quit_button = root.Q<Button>("quit");
+
+      // Callback
+      play_button.RegisterCallback<ClickEvent>(playGame);
+      credits_button.RegisterCallback<ClickEvent>(credits);
+      quit_button.RegisterCallback<ClickEvent>(quit);
+
     }
 
-    public void LoadScene(string sceneName )
+    public string Sala;
+    
+    void playGame(ClickEvent evt)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("Sala");
     }
 }
