@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class Code : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    UIDocument Main;
+
+    private void OnEnable() {
+      Main = GetComponent<UIDocument>(); 
+      VisualElement root = Main.rootVisualElement;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadScene(string sceneName )
     {
-        
+        SceneManager.LoadScene(sceneName);
     }
 }
