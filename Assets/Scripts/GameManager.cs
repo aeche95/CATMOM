@@ -35,27 +35,26 @@ public class GameManager : MonoBehaviour
         data.health += healthToAdd;
     }
 
-    public void SetAbandoned()
+    public void SetAbandoned(bool newAbandoned)
     {
-        data.isAbandoned = true;
-        SetAbandonedItems();
+        data.isAbandoned = newAbandoned;
+        
+        SetAbandonedItems(data.isAbandoned);
+        
     }
 
     void CheckAbandoned()
     {
-        if (data.isAbandoned)
-        {
-            SetAbandonedItems();
-        }
+        SetAbandonedItems(data.isAbandoned);
     }
 
-    void SetAbandonedItems()
+    void SetAbandonedItems(bool areAbandoned)
     {
         GameObject[] nonInteractables = GameObject.FindGameObjectsWithTag(nonInteractablesTag);
         foreach (GameObject gameObject in nonInteractables)
         {
             Obj_fondo obj_Fondo = gameObject.GetComponent<Obj_fondo>();
-            obj_Fondo.Abandon();
+            obj_Fondo.Abandon(areAbandoned);
         }
     }
 

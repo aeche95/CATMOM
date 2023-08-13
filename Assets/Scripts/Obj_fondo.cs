@@ -15,10 +15,11 @@ public class Obj_fondo : MonoBehaviour
     [SerializeField]
     Image image;
 
-    public void Abandon()
+    public void Abandon(bool newIsAbandoned)
     {
-        isAbandoned = true;
-        image.sprite = images[images.Length-1];
+        isAbandoned = newIsAbandoned;
+
+        image.sprite = images[isAbandoned? images.Length-1 : 0];
     }
 
     private void Awake()
