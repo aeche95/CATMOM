@@ -13,13 +13,13 @@ public class SceneChangeManager : MonoBehaviour
     {
         data.lastSceneIndex = data.currentSceneIndex;
         data.currentSceneIndex += sceneDirection;
-        if (data.currentSceneIndex >= SceneManager.sceneCountInBuildSettings) 
+        if (data.currentSceneIndex >= data.playableScenes.Length) 
         {
-            data.currentSceneIndex = 2;
+            data.currentSceneIndex = 0;
         }
-        if (data.currentSceneIndex < 2) 
+        if (data.currentSceneIndex < 0) 
         {
-            data.currentSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
+            data.currentSceneIndex = data.playableScenes.Length - 1;
         }
        
         SceneManager.LoadScene(data.currentSceneIndex);

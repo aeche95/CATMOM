@@ -6,8 +6,11 @@ using UnityEngine;
 public class SceneManagementSO : ScriptableObject
 {
     [SerializeField]
-    public int currentSceneIndex = 2;
+    public int currentSceneIndex = 0;
 
     [SerializeField]
-    public int lastSceneIndex = 2;
+    public int lastSceneIndex = 0;
+
+    [SerializeField]
+    public string[] playableScenes;
 }
