@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 123106282}
   - component: {fileID: 123106284}
   - component: {fileID: 123106283}
+  - component: {fileID: 123106285}
   m_Layer: 5
   m_Name: Fondo
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,6 +199,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123106281}
   m_CullTransparentMesh: 1
+--- !u!114 &123106285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123106281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808ee6818818f05488d720c35fcdaa48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 21300000, guid: 611a33b42e4892641895b2baf1b1c2b9, type: 3}
+  - {fileID: 21300000, guid: 748a4d5e310208940a65d0afaaa6aa41, type: 3}
+  isAbandoned: 0
+  image: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +322,7 @@ GameObject:
   - component: {fileID: 855266261}
   m_Layer: 5
   m_Name: Pastillas
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,7 +361,7 @@ MonoBehaviour:
   images:
   - {fileID: 21300000, guid: f011cc0f8d118b64babe2ab357e2c357, type: 3}
   - {fileID: 21300000, guid: 70e65353af9c3d345ac0869f9a1fe740, type: 3}
-  isDamaged: 0
+  isAbandoned: 0
   image: {fileID: 855266262}
 --- !u!114 &855266262
 MonoBehaviour:
@@ -397,7 +415,7 @@ GameObject:
   - component: {fileID: 888150766}
   m_Layer: 5
   m_Name: Plato
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -436,7 +454,7 @@ MonoBehaviour:
   images:
   - {fileID: 21300000, guid: 7bad1035cbfc96548bb89a476c09029a, type: 3}
   - {fileID: 21300000, guid: 38e7992693ca1f4498db7ee96ae846b8, type: 3}
-  isDamaged: 0
+  isAbandoned: 0
   image: {fileID: 0}
 --- !u!114 &888150767
 MonoBehaviour:
@@ -529,7 +547,7 @@ MonoBehaviour:
   images:
   - {fileID: 21300000, guid: c0a560735a584fe44b02c6040ad05942, type: 3}
   - {fileID: 21300000, guid: 324f7f30e59c7b743bb49d6105a06a2b, type: 3}
-  isDamaged: 0
+  isAbandoned: 0
   image: {fileID: 930809102}
 --- !u!114 &930809102
 MonoBehaviour:
