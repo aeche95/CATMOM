@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
@@ -22,21 +20,26 @@ public class Code : MonoBehaviour
       quit_button = root.Q<Button>("quit");
 
       // Callback
-      play_button.RegisterCallback<ClickEvent>(playGame);
-      //credits_button.RegisterCallback<ClickEvent>(credits);
-      quit_button.RegisterCallback<ClickEvent>(quitGame);
+      play_button.RegisterCallback<ClickEvent>(OnPlayButtonPressed);
+      credits_button.RegisterCallback<ClickEvent>(OnCreditsButtonPressed);
+      quit_button.RegisterCallback<ClickEvent>(OnQuitButtonPressed);
 
     }
 
-    public string Sala;
+    public string PrimeraHabitacion;
     
-    void playGame(ClickEvent evt)
+    public void OnPlayButtonPressed(ClickEvent evt)
     {
-        SceneManager.LoadScene("Habitacion", LoadSceneMode.Single);
+        SceneManager.LoadScene(PrimeraHabitacion);
     }
 
-    public void quitGame(ClickEvent evt) 
-    { 
+    public void OnCreditsButtonPressed(ClickEvent evt)
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void OnQuitButtonPressed(ClickEvent evt)
+    {
         Application.Quit();
     }
 }

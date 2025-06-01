@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
 public class ChangeSceneMenu : MonoBehaviour
 {
-    public void playgame()
+    public void OnPlayButtonPressed()
     {
         SceneManager.LoadScene("Sala");
     }
 
-    public void credits()
+    public void OnCreditsButtonPressed()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+    public void OnQuitButtonPressed()
+    {
+        Application.Quit();
     }
 }
